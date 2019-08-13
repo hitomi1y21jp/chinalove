@@ -1,0 +1,433 @@
+@charset "UTF-8";
+
+/* ===============================================
+Base
+=============================================== */
+
+/*
+  Reset
+----------------------------------------------- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
+  Default Style
+----------------------------------------------- */
+body {
+  font-family: 'Noto Sans JP', '游ゴシック', 'Yu Gothic', '游ゴシック体', 'YuGothic', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'Meiryo UI', 'メイリオ', Meiryo, sans-serif;
+  line-height: 1.5;
+  color: #212121;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+/* ===============================================
+  Layout
+=============================================== */
+
+/*
+  Centering
+----------------------------------------------- */
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+/*
+  Header
+----------------------------------------------- */
+header {
+  background-color: white;
+  color: black;
+}
+
+header h1 {
+  text-align: left;
+  padding: 0.5em 0;
+  font-weight:bold;
+  font-size: 2em;
+}
+/*
+  Header_menue
+----------------------------------------------- */
+
+#header-nav {
+  overflow: hidden;
+}
+
+#header-nav li {
+  width: 33.33%;
+  float: left;
+  box-sizing: border-box;
+  text-align: center;
+
+}
+
+#header-nav li + li a {
+  border-left: 1px dotted #1a1a1a;
+}
+
+
+#header-nav a {
+  display: block;
+ text-decoration: none;
+  color: black;
+  background-color: pink;
+  padding: .25em 0;
+  font-weight: bold;
+
+}
+
+#header-nav a:hover {
+  background-color: whitesmoke;
+}
+
+/*
+   main_panda design
+----------------------------------------------- */
+
+#mainpanda {
+  overflow: hidden;
+}
+
+#mainpanda img{
+  float:left;
+  width: 45%;
+}
+
+#mainpanda #panda {
+  float: right;
+  width: 55%
+
+}
+
+#mainpanda p {
+margin-top:150px;
+}
+
+#panda p {
+  font-size: 1.2em;
+}
+
+.item_text{
+  font-size:2rem;
+  display:inline-block;
+  animation: key1 .3s ease infinite alternate;
+}
+
+
+@keyframes key1{
+  0% {transform: translateY(0px);}
+  100% {transform: translateY(-10px);}
+}
+
+
+
+/*
+  main-panda-bottom
+----------------------------------------------- */
+
+
+#panda-bottom {
+margin-top:20px;
+margin-bottom: 25px;
+padding-left:960px; 
+display:inline-block;
+white-space:nowrap;
+background-color: lightyellow;
+height: 25px;
+width: 960px;
+background-image: url(taikyoku1.png);
+clear: both;
+animation-name:marquee; 
+animation-timing-function:ease-in-out;
+animation-duration:50s; 
+animation-iteration-count:3;
+animation-direction: alternate;
+}
+@keyframes marquee {
+  from   { transform: translate(0%);}
+  99%,to { transform: translate(-100%);}
+}
+
+
+
+
+/*
+  heading-style
+----------------------------------------------- */
+
+.heading {
+  text-align: left;
+  font-size: 1.5em;
+  font-weight: bold;
+  /* margin-top: 1.5em; */
+  margin-bottom: 0.5em;
+  display: block;
+  background-color: #c0c0c0;
+  border-width: 20px;
+  border-color: pink;
+  border-left-style: solid;
+}
+
+#description p {
+ font-size: 1.2em;
+ font-weight: bold;
+}
+
+#description a {
+ text-decoration: none;
+ display: block;
+
+}
+
+#link {
+ text-align: right;
+ margin-bottom: 10px;
+}
+
+/*
+  introduction
+----------------------------------------------- */
+
+.intro1 {
+  width: 960px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+ .intro1+.intro1  {
+  border-width: 3px;
+  border-color: red;
+  border-top-style: dotted;
+  }
+
+.intro1 img  {
+  float:left;
+  box-sizing: border-box;
+}
+
+.intro1 table {
+  float: right;
+  width: 65%;
+
+}
+.intro1 p {
+  text-align: center;
+  font-size: 1.7em;
+  padding-top: 150px;
+  padding-bottom: 320px;
+  font-weight:bold;
+}
+
+.intro1 img {
+  border-radius: 50%; border: 2px solid pink;
+}
+
+
+/*
+  grah style for introduction1
+----------------------------------------------- */
+
+table{
+  width: 100%;
+  border-collapse:separate;
+  border-spacing: 0;
+   table-layout: fixed;
+}
+
+table tr:first-child{
+  border-radius: 5px 0 0 0;
+}
+
+table tr:last-child{
+  border-radius: 0 5px 0 0;
+  border-right: 1px solid #3c6690;
+}
+
+table tr{
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  background: linear-gradient(#e4a2d0, #e5b7d4);
+  border-left: 1px solid #e5b7d4;
+  border-top: 1px solid #e5b7d4;
+  border-bottom: 1px solid #e5b7d4;
+  box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
+  width: 25%;
+  padding: 10px 0;
+}
+
+table td{
+  text-align: left;
+  border-left: 1px solid #a8b7c5;
+  border-bottom: 1px solid #a8b7c5;
+  border-top:none;
+  box-shadow: 0px -3px 5px 1px #eee inset;
+  width: 25%;
+  padding: 10px 0;
+}
+
+table td:last-child{
+  border-right: 1px solid #a8b7c5;
+}
+
+table tr:last-child td:first-child {
+  border-radius: 0 0 0 5px;
+}
+
+table tr:last-child td:last-child {
+  border-radius: 0 0 5px 0;
+}
+
+.a {
+  width: 50px;
+}
+
+.b {
+  width: 70px;
+}
+
+/*
+  grah style for intro2
+----------------------------------------------- */
+#intro2 table {
+  width: 900px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.c {
+  width: 30%;
+  height: 60px;
+
+}
+
+.d {
+  width: 70%;
+
+
+}
+
+
+/*
+  button-pagetop
+----------------------------------------------- */
+.button-pagetop {
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    right: 8px;
+    bottom: 48px;
+    background-color: pink;
+    opacity: 0.7;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.page-top-icon {
+    color: rgb(15, 12, 12);
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-weight: bold;
+}
+/*
+  footer style
+----------------------------------------------- */
+
+
+
+#last{
+  background-color: lightgrey;
+  margin-top: 30px;
+
+}
+
+#last {
+  overflow: hidden;
+}
+
+#last p {
+float: left;
+font-weight: bold;
+padding-left: 25px;
+padding-top: 10px;
+}
+
+#last li {
+  float: right;
+  display: block;
+  padding-right: 25px;
+  padding-top: 10px;
+
+}
+
+
+#last a {
+  display: block;
+ text-decoration: none;
+  color: black;
+  background-color: lightgrey;
+  padding: .25em 0;
+  font-weight: bold;
+
+}
+
+#header-nav a:hover {
+  background-color: whitesmoke;
+}
+
+/*
+background-image
+----------------------------------------------- */
+
+.scroll {
+ background-image: url(KakaoTalk_20190729_141304397.jpg);
+ background-attachment: fixed;
+ background-size: cover;
+}
